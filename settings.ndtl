@@ -1,35 +1,58 @@
 DATABASE.settings = `
 CATEGORIES
-  WORK : #FF68A3
-  LIFE : #EBD33F
-  SLEEP : #42C2EE
+  PHD : #FF4F48
+  HOBBY : #CC48FF
+  SPORT : #48FF8A
+  SOCIAL : #48AEFF
+  OTHER : #FFCA48
+  UNTRACKED : #4B4B49
 PROJECTS
-  Company
-    CAT : WORK
-    NAME : Company
-  TimeTracker
-    CAT : WORK
-    NAME : Time Tracker
-  Website
-    CAT : WORK
-    NAME : Website
-  Household
-    CAT : LIFE
-    NAME : Household
-  Cooking
-    CAT : LIFE
-    NAME : Cooking
-  Personal
-    CAT : LIFE
-    NAME : Personal
-  Family
-    CAT : LIFE
-    NAME : Family
-  SLEEP
-    CAT : SLEEP
-    NAME : Sleep
-SCORES
-  BODY : #FF68A3
-  MIND : #EBD33F
-  MOOD : #42C2EE
+  Bureaucracy
+    CAT : PHD
+    NAME : Bureaucracy
+  Courses
+    CAT : PHD
+    NAME : Course Work
+  DepDuties
+    CAT : PHD
+    NAME : Departmental Duties
+  Research
+    CAT : PHD
+    NAME : Research
+  Climbing
+    CAT : SPORT
+    NAME : Climbing
+  Cycling
+    CAT : SPORT
+    NAME : Cycling
+  Lunch
+    CAT : SOCIAL
+    NAME : Lunch break
+  Lcsda
+    CAT : SOCIAL
+    NAME : La Compagnia dello Strano Anello
+  Reading
+    CAT : HOBBY
+    NAME : Reading
+  Haskell
+    CAT : HOBBY
+    NAME : Impara l'Haskell
+  Svenska
+    CAT : HOBBY
+    NAME : Svenska
+  Blog
+    CAT : HOBBY
+    NAME : Blog
+  Photography
+    CAT : HOBBY
+    NAME : Photography
+  Housework
+    CAT : OTHER
+    NAME : Housework
+  Planning
+    CAT : OTHER
+    NAME : Planning
+  Void
+    CAT : UNTRACKED
+    NAME : Void
 `

@@ -83,3 +83,5 @@ small { font-size: 80%; }
 .lc { text-transform: lowercase; }
 .rounded { border-radius: var(--rounded); }
 .small { font-size: 80%; }
+
+#scores { display: none; }
