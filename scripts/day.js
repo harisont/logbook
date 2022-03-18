@@ -85,7 +85,7 @@ function Day (date) {
 		getAverages : function () {
 			for (const s in this.scores) {
 				const cat = this.scores[s]
-				const avrg = parseFloat((this.getSum(cat) / cat.length).toFixed(2))
+				const avrg = parseFloat((this.getSum(cat) / cat.length).toFixed(1))
 				this.average[s] = isNaN(avrg) ? 0 : avrg
 			}
 		},

@@ -26,7 +26,7 @@ function Interface () {
     const toDate = document.querySelector('#toDate')
     if (fromDate) fromDate.onchange = function () { dates.from = fromDate.value; logbook.update() }    
     if (toDate) toDate.onchange = function () { dates.to = toDate.value; logbook.update() }    
-    console.info(`Logbook built interface in ${(performance.now() - time).toFixed(2)}ms.`)
+    console.info(`Logbook built interface in ${(performance.now() - time).toFixed(1)}ms.`)
   }
 
   this.home = function () {
@@ -65,7 +65,7 @@ function Interface () {
     statsEl.id = 'stats'
     overview.appendChild(statsEl)
     statsEl.innerHTML += this.datepickers()
-    statsEl.innerHTML += `<h3>${stats.days}<span class="lc">d</span> / ${stats.hours.toFixed(2)}<span class="lc">h</span> / ${stats.entries}<span class="lc">e</span></h3>`
+    statsEl.innerHTML += `<h3>${stats.days}<span class="lc">d</span> / ${stats.hours.toFixed(1)}<span class="lc">h</span> / ${stats.entries}<span class="lc">e</span></h3>`
 
     if (database.stats.filter.entries > 0) {
       const summary = new Summary(overview)
@@ -180,7 +180,7 @@ function Interface () {
       const percent = (project.hours * 100 / hours).toFixed(1)
       el.innerHTML += 
        `<h3><a href="#${project.name.toLowerCase()}">${data.NAME}</a></h3>
-        <h4>${project.hours.toFixed(2)}h / ${project.count}e / ${percent}%</h4>`
+        <h4>${project.hours.toFixed(1)}h / ${project.count}e / ${percent}%</h4>`
       const parent = projects.querySelector(`#${(database.projects[project.name].CAT).toLowerCase()}`)
       if (parent !== null) parent.appendChild(el)
     }

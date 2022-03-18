@@ -77,8 +77,8 @@ function Database () {
       // update stats
       database.stats.total.entries += 1
     }
-    for (const cat in database.categories) database.categories[cat].percentage = parseFloat((database.categories[cat].hours * 100 / database.stats.hours).toFixed(2))
-    console.info(`Found ${database.stats.total.entries} entries in database, in ${(performance.now() - time).toFixed(2)}ms.`)
+    for (const cat in database.categories) database.categories[cat].percentage = parseFloat((database.categories[cat].hours * 100 / database.stats.hours).toFixed(1))
+    console.info(`Found ${database.stats.total.entries} entries in database, in ${(performance.now() - time).toFixed(1)}ms.`)
   }
 
   this.update = function (params) {
@@ -149,10 +149,10 @@ function Database () {
     for (const c in database.categories) {
       const cat = database.categories[c]
       if (!cat.hours) cat.hours = 0
-      cat.percentage = parseFloat((cat.hours * 100 / database.stats.filter.hours).toFixed(2))
+      cat.percentage = parseFloat((cat.hours * 100 / database.stats.filter.hours).toFixed(1))
       if (isNaN(cat.percentage)) cat.percentage = 0
     }
-    console.info(`Filtered ${database.stats.filter.entries} entries from ${this.from} to ${this.to}, in ${(performance.now() - time).toFixed(2)}ms.`)
+    console.info(`Filtered ${database.stats.filter.entries} entries from ${this.from} to ${this.to}, in ${(performance.now() - time).toFixed(1)}ms.`)
     console.info(database)
   }
 
